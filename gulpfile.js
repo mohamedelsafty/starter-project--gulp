@@ -101,6 +101,7 @@ const uglify = require('gulp-uglify');
 const del = require('del');
 const browserSync = require('browser-sync').create();
 const htmlmin = require('gulp-htmlmin');
+const replace = require("gulp-replace");
 
 const sourcemaps = require('gulp-sourcemaps');
 const sass = require('gulp-sass');
@@ -118,6 +119,17 @@ const jsFiles = [
    './src/js/lib.js',
    './src/js/main.js'
 ];
+
+
+
+function html() {
+   // return gulp.src('./src/*.html')
+   return gulp.src("./*.html")
+   .pipe(htmlmin({ collapseWhitespace: true }))
+   .pipe(replace('"src/', '"./'))
+   .pipe(gulp.dest(distPath));
+ };
+
 
 //Task for CSS styles
 function styles() {
@@ -162,11 +174,7 @@ function clean() {
    return del(['dist/*'])
 }
 
-gulp.task('minify', () => {
-   return gulp.src('./src/*.html')
-     .pipe(htmlmin({ collapseWhitespace: true }))
-     .pipe(gulp.dest('./dist/'));
- });
+
 
 
 //Watch files
@@ -188,6 +196,7 @@ function watch() {
 
 //Task calling 'styles' function
 gulp.task('styles', styles);
+gulp.task('html', html);
 //Task calling 'scripts' function
 gulp.task('scripts', scripts);
 //Task for cleaning the 'build' folder
@@ -195,7 +204,7 @@ gulp.task('del', clean);
 //Task for changes tracking
 gulp.task('watch', watch);
 //Task for cleaning the 'build' folder and running 'styles' and 'scripts' functions
-gulp.task('build', gulp.series(clean, gulp.parallel(styles,scripts)));
+gulp.task('build', gulp.series(clean, gulp.parallel(styles,scripts,html)));
 //Task launches build and watch task sequentially
 gulp.task('dev', gulp.series('build','watch'));
 //Default task
