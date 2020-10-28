@@ -125,7 +125,7 @@ function styles() {
    .pipe(sourcemaps.init())
    .pipe(sass({ outputStyle: "expanded" }).on("error", sass.logError))
    //Merge files into one
-   .pipe(concat('style.css'))
+   // .pipe(concat('style.css'))
    //Add prefixes
    .pipe(autoprefixer({
       browsers: ["last 2 versions"],
@@ -138,6 +138,7 @@ function styles() {
    .pipe(sourcemaps.write('./maps/'))
    //Output folder for styles
    .pipe(gulp.dest(distPath + '/css'))
+   .pipe(gulp.dest(srcPath + '/css'))
    .pipe(browserSync.stream());
    
 }
