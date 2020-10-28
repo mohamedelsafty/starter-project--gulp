@@ -57,7 +57,7 @@ Open `cmd` on Windows or `Terminal` on Linux/MacOS and follow next steps:
     - change `gulp.watch('./src/css/**/*.sass', styles);` to the ` gulp.watch('./src/css/**/*.less', styles);` in the `watch()` function
     - delete `gulp.watch('./src/css/**/*.scss', styles);`
  
-#### Stylus:
+#### Styles:
 1. Go to the project folder - `cd gulp-4-sass`
 2. Run command `npm i`
 3. Run command `npm i -SD gulp-stylus`
