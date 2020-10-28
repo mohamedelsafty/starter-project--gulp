@@ -1,0 +1,76 @@
+.section__section-background {
+  height: 100%;
+  width: 100%;
+}
+
+.content-container__header {
+  color: $color-white;
+  font-size: 80px;
+}
+
+.content-container__text {
+  color: $color-white;
+  font-size: 27px;
+}
+
+.bottom-arrow {
+  fill: $color-white;
+  height: 55px;
+  width: 40px;
+  margin-top: 5em;
+}
+
+.scroll-down {
+  text-align: center;
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.mt--110 {
+  margin-top: 110px;
+}
+
+.section--red {
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-color: $color-primary-dark;
+  background-image: url(#{$img-path}/ok-bg.png);
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-size: 100% 73%;
+
+  img {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    // animation-name: loop;
+    // animation-direction: normal;
+    // animation-duration: .2;
+    // animation-iteration-count: infinite;
+  }
+}
+
+.section--red2 {
+  background-image: url(#{$img-path}/services-bg.jpg);
+  background-size: 100% 100%;
+}
+
+.bottom--section {
+  margin-top: 15%;
+}
+
+.section-banner-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}

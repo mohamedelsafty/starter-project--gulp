@@ -1,0 +1,33 @@
+.main-section {
+  padding-top: 2em;
+  &--background {
+  }
+  @include breakpoint(mid) {
+    padding-top: 7em;
+  }
+}
+
+.bg-body {
+  background-image: url(#{$img-path}/OK-logo-bg.png);
+  background-repeat: repeat-y;
+  background-position: calc(25% - 50px);
+  @include breakpoint(x-large) {
+    background-position: calc(5% - 50px);
+  }
+}
+
+.second-section {
+  margin-bottom: 5em;
+}
+
+.section-bg {
+  position: absolute;
+  left: -90px;
+  top: 0;
+  height: 100%;
+  width: 110%;
+  z-index: -1;
+  @include breakpoint(isMobile) {
+    display: none;
+  }
+}

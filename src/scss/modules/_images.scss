@@ -1,0 +1,19 @@
+.img-resposive {
+  width: 100%;
+  &--height {
+    height: 100%;
+  }
+}
+
+.map {
+  height: 343px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.img-on-mobile {
+  margin-bottom: 20px;
+  @include breakpoint(mid) {
+    margin-bottom: 0px;
+  }
+}

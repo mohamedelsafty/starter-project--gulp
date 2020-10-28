@@ -1,0 +1,21 @@
+.card {
+  text-align: center;
+  padding-bottom: 2em;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  justify-content: space-between;
+  grid-template-rows: auto auto 1fr auto;
+  justify-items: center;
+  grid-template-columns: 1fr;
+}
+
+.card__head {
+  font-weight: normal;
+}
+
+.card__img {
+  margin-bottom: 20px;
+  width: 100px;
+  height: 100px;
+}

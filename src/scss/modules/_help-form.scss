@@ -1,0 +1,178 @@
+.section__header {
+  color: $color-primary;
+  font-size: 2.5em;
+}
+
+.section__content {
+  color: $color-grey-800;
+  font-size: 2em;
+}
+
+.section__btn {
+  background-color: $color-primary;
+  color: $color-white;
+  border-style: none;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.section__btn:focus {
+  outline: none;
+}
+
+.form--btn {
+  font-size: 0.8rem;
+  padding: 1rem 4rem;
+  letter-spacing: rem(2.4);
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  // display: none;
+  z-index: 30;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background: rgba(255, 255, 255, 0.9);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.9);
+  @include transition();
+}
+.form-popup--show {
+  // display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+/* Set a style for the submit/login button */
+.close-icon {
+  cursor: pointer;
+  fill: $color-dark;
+  width: rem(15);
+  height: rem(15);
+  position: absolute;
+  top: 5%;
+  right: 5%;
+}
+
+.form-container__label {
+  color: $color-dark;
+  font-size: rem(12);
+  letter-spacing: rem(2.88);
+  margin-right: 20px;
+  margin-bottom: 0;
+  min-width: 75px;
+}
+
+.form-container__input {
+  border-style: none;
+  border-bottom: 1px solid #cccccc;
+  color: $color-dark;
+  font-size: rem(14);
+  font-weight: bold;
+  background-color: transparent;
+  min-width: 200px;
+
+  @include breakpoint(mid) {
+    min-width: 320px;
+  }
+}
+
+.form-container__input:focus {
+  outline-style: none;
+}
+
+.form-container__data {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.m--0 {
+  margin: 0;
+}
+
+.mb--45 {
+  margin-bottom: rem(45);
+}
+
+.mb--65 {
+  margin-bottom: rem(65);
+}
+
+.mb--40 {
+  margin-bottom: rem(40);
+}
+
+.submit--btn {
+  padding: rem(15) rem(65);
+}
+
+.form-container__data-verify {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.data-verify__text {
+  color: #9fa3a7;
+  font-size: rem(13);
+}
+
+.align--start {
+  align-items: flex-start;
+}
+
+.astrek {
+  color: #f9593a;
+  font-size: rem(15);
+}
+
+.astrek--input {
+  position: absolute;
+  right: 0;
+  color: #f9593a;
+  font-size: rem(18);
+}
+
+.data-verify__requird-container {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.mr--10 {
+  margin-right: 10px;
+}
+
+.mb--0 {
+  margin-bottom: 0;
+}
+
+.form--padding {
+  padding: rem(100) 0;
+}
+
+.form-popup__close {
+  background: $color-white;
+}
+
+.form__headedr-label {
+  font-size: rem(17);
+  line-height: rem(45);
+  text-transform: uppercase;
+  color: $color-dark;
+  font-weight: normal;
+}
+
+.form__text {
+  font-size: rem(19);
+  line-height: rem(31);
+  color: $color-text;
+}

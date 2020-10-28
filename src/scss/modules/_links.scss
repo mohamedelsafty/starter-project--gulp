@@ -1,0 +1,41 @@
+.pro-links {
+  display: flex;
+  padding: 0;
+  flex-direction: column;
+  li + li {
+    @include breakpoint(mid) {
+      margin-left: 80px;
+    }
+  }
+  @include breakpoint(mid) {
+    flex-direction: row;
+  }
+}
+
+.pro-links__link {
+  a {
+    font-size: rem(27);
+    color: $color-white;
+    text-decoration: none;
+    text-transform: capitalize;
+    &:hover {
+      text-decoration: none;
+      opacity: 0.7;
+    }
+  }
+}
+
+.custom-link {
+  display: flex;
+  align-items: center;
+  font-size: rem(12);
+  a {
+    letter-spacing: rem(2.4);
+    color: $color-grey-900;
+  }
+  svg {
+    fill: $color-grey-900;
+    width: 20px;
+    height: 20px;
+  }
+}

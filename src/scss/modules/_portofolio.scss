@@ -1,0 +1,144 @@
+.purple {
+  transition: 0.3s;
+  padding: 30px 0;
+  &:hover {
+    background-color: #6f3695;
+    .hover--white {
+      color: $color-white;
+    }
+    .content__link {
+      visibility: visible;
+      color: $color-white;
+      font-size: rem(12);
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+  .content__arrow {
+    visibility: visible;
+    height: rem(15);
+    width: rem(15);
+    fill: $color-white;
+    margin-left: rem(10);
+  }
+}
+
+.content__link-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.content__link {
+  visibility: hidden;
+  text-decoration: none;
+  &:hover {
+    color: $color-primary;
+    transition-duration: 1s;
+    text-decoration: none;
+  }
+}
+
+.orange {
+  transition: 0.3s;
+  padding: 30px 0;
+  &:hover {
+    background-color: #f37a20;
+    .hover--white {
+      color: $color-white;
+    }
+    .content__link {
+      visibility: visible;
+      color: $color-white;
+      font-size: rem(12);
+    }
+  }
+  .content__arrow {
+    visibility: visible;
+    height: rem(15);
+    width: rem(15);
+    fill: $color-white;
+    margin-left: rem(10);
+  }
+}
+
+.content__link {
+  visibility: hidden;
+  text-decoration: none;
+  &:hover {
+    color: $color-primary;
+    transition-duration: 1s;
+    text-decoration: none;
+  }
+}
+
+.grey {
+  transition: 0.3s;
+  padding: 30px 0;
+  &:hover {
+    background-color: #ededed;
+    .hover--white {
+      color: $color-white;
+    }
+    .content__link {
+      visibility: visible;
+      color: $color-white;
+      font-size: rem(12);
+    }
+  }
+  .content__arrow {
+    visibility: visible;
+    height: rem(15);
+    width: rem(15);
+    fill: $color-white;
+    margin-left: rem(10);
+  }
+}
+
+.content__link {
+  visibility: hidden;
+  text-decoration: none;
+  letter-spacing: rem(2.4);
+  &:hover {
+    color: $color-primary;
+    transition-duration: 1s;
+    text-decoration: none;
+  }
+}
+
+.content__arrow {
+  visibility: hidden;
+}
+
+.content__title {
+  color: $color-primary;
+  font-size: rem(25);
+}
+
+.content__descreption {
+  color: $color-grey-800;
+  font-size: rem(21);
+}
+
+.section-container__background {
+  height: 330px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container--padding {
+  padding: rem(50) 0 rem(120) 0;
+}
+
+.clr--purple {
+  background-color: #6f3695;
+}
+
+.clr--orange {
+  background-color: #f37a20;
+}
+
+.clr--grey {
+  background-color: #ededed;
+}

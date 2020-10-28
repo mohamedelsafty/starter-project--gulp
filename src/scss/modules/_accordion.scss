@@ -1,0 +1,29 @@
+.accordion {
+    transition: .2s all ease-in-out;
+}
+
+.accordion__card {
+    transition: .2s all ease-in-out;
+}
+
+.accordion__card-header {
+    background-color: #ddd;
+    padding: 8px 20px;
+    cursor: pointer;
+    margin: 0;
+    transition: .2s all ease-in-out;
+}
+
+.accordion__card-collapse {
+    background-color:#eee;
+    transition: .2s all ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+    p {
+        margin: 0;
+    }
+    &--collapsed {
+        transition: .2s all ease-in-out;
+        max-height: 100px;
+    }
+}

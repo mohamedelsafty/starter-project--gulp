@@ -1,0 +1,79 @@
+.banner {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color-primary;
+    z-index: -3;
+  }
+  &--contact {
+    //background-color: $color-primary;
+    //background-image: url(#{$img-path}/Crown.png);
+    // background-repeat: no-repeat;
+    // background-position: 85% 100%;
+    // background-size: 55%;
+    margin-bottom: 4em;
+  }
+  &--portfolio {
+    background-image: url(#{$img-path}/portfolio-bg.png);
+  }
+}
+
+.banner-lg__header-container {
+  padding-top: 50%;
+
+  @include breakpoint(small) {
+    padding-top: 35%;
+  }
+  @include breakpoint(large) {
+    padding-top: 25%;
+  }
+}
+.banner__container {
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+
+  @include breakpoint(mid) {
+    justify-content: flex-end;
+  }
+}
+
+.banner__img {
+  position: absolute;
+  right: 20px;
+  bottom: -2px;
+  z-index: -1;
+  @include breakpoint(isMobile) {
+    width: 100%;
+  }
+}
+
+.banner__head {
+  color: $color-white;
+  font-size: rem(58);
+  font-weight: bold;
+  line-height: rem(69);
+  margin-bottom: 0.4em;
+  text-transform: uppercase;
+  @include breakpoint(mid) {
+    letter-spacing: rem(-5.28);
+    font-size: rem(78);
+  }
+}
+
+.banner__text {
+  color: $color-white;
+  font-size: rem(27);
+  letter-spacing: rem(-0.49);
+  line-height: rem(31);
+  margin-bottom: 2rem;
+}

@@ -1,0 +1,198 @@
+.swiper-container {
+  &--custom {
+    //padding-top: 150px;
+    cursor: default !important;
+  }
+}
+
+.swiper-wrapper {
+  cursor: grab;
+}
+
+.ok-welcome__pagination {
+  &--custom {
+    padding: 20px 0;
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    height: rem(100);
+    margin-top: 9em;
+    margin-left: 1em;
+
+    @include breakpoint(small) {
+      margin-left: 8em;
+    }
+    @media (min-width: 1400px) {
+      margin-left: 17%;
+    }
+    // @include breakpoint(x-large) {
+    //   margin-left: 10%;
+    // }
+  }
+}
+
+.ok-welcome__navigator {
+  display: block;
+  width: 6em;
+  height: 1px;
+  position: relative;
+  padding: 10px 0;
+  @include transition();
+  cursor: pointer;
+
+  @include breakpoint(small) {
+    width: 7em;
+  }
+
+  @include breakpoint(large) {
+    width: rem(126);
+  }
+}
+
+body {
+  counter-reset: slider-count;
+}
+
+.ok-welcome__navigator {
+  &::before {
+    counter-increment: slider-count;
+    content: "0" counter(slider-count);
+    position: absolute;
+    top: rem(-40);
+    width: 100%;
+    padding: rem(10px) 0;
+    color: #fff;
+    opacity: 0.3;
+    font-size: rem(23);
+    @include transition();
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    padding: 0.5px 0;
+    background-color: #fff;
+    opacity: 0.3;
+    @include transition();
+  }
+}
+
+.ok-welcome__navigator {
+  &--active {
+    &::after {
+      opacity: 1;
+    }
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+.swiper-slide__img {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-color: $color-primary;
+  background-image: url(#{$img-path}/OK-logo2.svg);
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-size: 230%;
+  animation: slide 30s linear infinite;
+
+  img {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    // animation-name: loop;
+    // animation-direction: normal;
+    // animation-duration: .2;
+    // animation-iteration-count: infinite;
+  }
+  iframe {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
+@keyframes slide {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: 100%;
+  }
+}
+
+.ok-welcome__title {
+  color: #fff;
+  font-size: rem(48);
+  font-weight: bold;
+  line-height: rem(49);
+  letter-spacing: -3.28px;
+  text-transform: uppercase;
+  margin-bottom: rem(45);
+
+  @include breakpoint(small) {
+    font-size: rem(78);
+    line-height: rem(69);
+    letter-spacing: -5.28px;
+  }
+}
+
+.ok-welcome__txt {
+  color: #fff;
+  font-size: rem(23);
+  letter-spacing: -0.42px;
+  line-height: rem(31);
+  margin-bottom: 2em;
+}
+
+.ok-welcome__link {
+  color: #ffffff;
+  font-size: rem(12);
+  letter-spacing: rem(2.4);
+  line-height: 14px;
+  text-decoration: none;
+  &:hover {
+    color: #ddd;
+    text-decoration: none;
+  }
+}
+
+.swiper-slide__content {
+  margin-top: 14em;
+  margin-left: 1em;
+  padding-right: 6em;
+  @include breakpoint(small) {
+    padding-right: 3em;
+    margin-left: 8em;
+  }
+  @include breakpoint(x-large) {
+    margin-top: 16em;
+  }
+  @media (min-width: 1400px) {
+    margin-left: 17%;
+  }
+}
+
+.parallax-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 130%;
+  height: 100%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-image: url(#{$img-path}/main/beach.jpg);
+}

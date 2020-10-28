@@ -1,0 +1,51 @@
+.u-color-white {
+  color: $color-white !important;
+}
+
+.u-elem-backdrop {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.87);
+  opacity: 0.3;
+  z-index: -1;
+}
+.u-text-center {
+  text-align: center;
+}
+
+.u-flex-grid {
+  padding: 0;
+  margin: 0 15px;
+}
+
+// .custom-container {
+//   margin: 0;
+//   padding-left: 1em;
+//   padding-right: 1em;
+//   @include breakpoint(mid) {
+//     padding-left: 4.6em;
+//     padding-right: 4.6em;
+//   }
+// }
+.mb--55 {
+  margin-bottom: 55px;
+}
+
+.margin--auto {
+  margin: auto;
+}
+.mr--80 {
+  margin-right: rem(80);
+}
+
+.link--style:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
